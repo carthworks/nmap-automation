@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.97 scan initiated Sat Jul 19 17:49:27 2025 as: nmap -sC -sV -O -T4 -oX report_20250719_174927.xml www.houseofindya.com -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -O -T4 -oX report_20250719_174927.xml www.houseofindya.com" start="1752927567" startstr="Sat Jul 19 17:49:27 2025" version="7.97" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1000" services="1,3-4,6-7,9,13,17,19-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="146.75.45.91" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.houseofindya.com" type="user"/>
+</hostnames>
+</hosthint>
+<host starttime="1752927569" endtime="1752927651"><status state="up" reason="reset" reason_ttl="43"/>
+<address addr="146.75.45.91" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.houseofindya.com" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="998">
+<extrareasons reason="no-response" count="998" proto="tcp" ports="1,3-4,6-7,9,13,17,19-26,30,32-33,37,42-43,49,53,70,79,81-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,444-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="http-proxy" product="Varnish" method="probed" conf="10"><cpe>cpe:/a:varnish-cache:varnish</cpe></service><script id="http-server-header" output="Nitrogen"><elem>Nitrogen</elem>
+</script><script id="http-title" output="Did not follow redirect to https://www.houseofindya.com/"><elem key="redirect_url">https://www.houseofindya.com/</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="48"/><service name="https" product="Nitrogen" servicefp="SF-Port443-TCP:V=7.97%T=SSL%I=7%D=7/19%Time=687B8D6D%P=i686-pc-windows-windows%r(GetRequest,1BC,&quot;HTTP/1\.1\x20421\x20Misdirected\x20Request\r\nConnection:\x20close\r\nContent-Length:\x20291\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-sin-wsss1830082\r\n\r\nRequested\x20host\x20does\x20not\x20match\x20any\x20Subject\x20Alternative\x20Names\x20\(SANs\)\x20on\x20TLS\x20certificate\x20\[388f9b5ae8e0abea8c1111214a7be2189cd61e6208f5c0234d9daae824adf6c1\]\x20in\x20use\x20with\x20this\x20connection\.\r\n\r\nVisit\x20https://www\.fastly\.com/documentation/guides/concepts/errors/#routing-errors\x20for\x20more\x20information\.\r\n\r&quot;)%r(HTTPOptions,1BC,&quot;HTTP/1\.1\x20421\x20Misdirected\x20Request\r\nConnection:\x20close\r\nContent-Length:\x20291\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-sin-wsss1830078\r\n\r\nRequested\x20host\x20does\x20not\x20match\x20any\x20Subject\x20Alternative\x20Names\x20\(SANs\)\x20on\x20TLS\x20certificate\x20\[388f9b5ae8e0abea8c1111214a7be2189cd61e6208f5c0234d9daae824adf6c1\]\x20in\x20use\x20with\x20this\x20connection\.\r\n\r\nVisit\x20https://www\.fastly\.com/documentation/guides/concepts/errors/#routing-errors\x20for\x20more\x20information\.\r\n\r&quot;)%r(FourOhFourRequest,1BC,&quot;HTTP/1\.1\x20421\x20Misdirected\x20Request\r\nConnection:\x20close\r\nContent-Length:\x20291\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-sin-wsss1830073\r\n\r\nRequested\x20host\x20does\x20not\x20match\x20any\x20Subject\x20Alternative\x20Names\x20\(SANs\)\x20on\x20TLS\x20certificate\x20\[388f9b5ae8e0abea8c1111214a7be2189cd61e6208f5c0234d9daae824adf6c1\]\x20in\x20use\x20with\x20this\x20connection\.\r\n\r\nVisit\x20https://www\.fastly\.com/documentation/guides/concepts/errors/#routing-errors\x20for\x20more\x20information\.\r\n\r&quot;)%r(tor-versions,9B,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Length:\x2011\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-sin-wsss1830028\r\n\r\nBad\x20Request&quot;)%r(RTSPRequest,9B,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Length:\x2011\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-sin-wsss1830071\r\n\r\nBad\x20Request&quot;);" tunnel="ssl" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 421 Misdirected Request&#xa;    Connection: close&#xa;    Content-Length: 291&#xa;    content-type: text/plain; charset=utf-8&#xa;    x-served-by: cache-sin-wsss1830073&#xa;    Requested host does not match any Subject Alternative Names (SANs) on TLS certificate [388f9b5ae8e0abea8c1111214a7be2189cd61e6208f5c0234d9daae824adf6c1] in use with this connection.&#xa;    Visit https://www.fastly.com/documentation/guides/concepts/errors/#routing-errors for more information.&#xa;  GetRequest: &#xa;    HTTP/1.1 421 Misdirected Request&#xa;    Connection: close&#xa;    Content-Length: 291&#xa;    content-type: text/plain; charset=utf-8&#xa;    x-served-by: cache-sin-wsss1830082&#xa;    Requested host does not match any Subject Alternative Names (SANs) on TLS certificate [388f9b5ae8e0abea8c1111214a7be2189cd61e6208f5c0234d9daae824adf6c1] in use with this connection.&#xa;    Visit https://www.fastly.com/documentation/guides/concepts/errors/#routing-errors for more information.&#xa;  HTTPOptions: &#xa;    HTTP/1.1 421 Misdirected Request&#xa;    Connection: close&#xa;    Content-Length: 291&#xa;    content-type: text/plain; charset=utf-8&#xa;    x-served-by: cache-sin-wsss1830078&#xa;    Requested host does not match any Subject Alternative Names (SANs) on TLS certificate [388f9b5ae8e0abea8c1111214a7be2189cd61e6208f5c0234d9daae824adf6c1] in use with this connection.&#xa;    Visit https://www.fastly.com/documentation/guides/concepts/errors/#routing-errors for more information.&#xa;  RTSPRequest: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;    Content-Length: 11&#xa;    content-type: text/plain; charset=utf-8&#xa;    x-served-by: cache-sin-wsss1830071&#xa;    Request&#xa;  tor-versions: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;    Content-Length: 11&#xa;    content-type: text/plain; charset=utf-8&#xa;    x-served-by: cache-sin-wsss1830028&#xa;    Request"><elem key="FourOhFourRequest">&#xa;    HTTP/1.1 421 Misdirected Request&#xa;    Connection: close&#xa;    Content-Length: 291&#xa;    content-type: text/plain; charset=utf-8&#xa;    x-served-by: cache-sin-wsss1830073&#xa;    Requested host does not match any Subject Alternative Names (SANs) on TLS certificate [388f9b5ae8e0abea8c1111214a7be2189cd61e6208f5c0234d9daae824adf6c1] in use with this connection.&#xa;    Visit https://www.fastly.com/documentation/guides/concepts/errors/#routing-errors for more information.</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 421 Misdirected Request&#xa;    Connection: close&#xa;    Content-Length: 291&#xa;    content-type: text/plain; charset=utf-8&#xa;    x-served-by: cache-sin-wsss1830082&#xa;    Requested host does not match any Subject Alternative Names (SANs) on TLS certificate [388f9b5ae8e0abea8c1111214a7be2189cd61e6208f5c0234d9daae824adf6c1] in use with this connection.&#xa;    Visit https://www.fastly.com/documentation/guides/concepts/errors/#routing-errors for more information.</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 421 Misdirected Request&#xa;    Connection: close&#xa;    Content-Length: 291&#xa;    content-type: text/plain; charset=utf-8&#xa;    x-served-by: cache-sin-wsss1830078&#xa;    Requested host does not match any Subject Alternative Names (SANs) on TLS certificate [388f9b5ae8e0abea8c1111214a7be2189cd61e6208f5c0234d9daae824adf6c1] in use with this connection.&#xa;    Visit https://www.fastly.com/documentation/guides/concepts/errors/#routing-errors for more information.</elem>
+<elem key="RTSPRequest">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;    Content-Length: 11&#xa;    content-type: text/plain; charset=utf-8&#xa;    x-served-by: cache-sin-wsss1830071&#xa;    Request</elem>
+<elem key="tor-versions">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;    Content-Length: 11&#xa;    content-type: text/plain; charset=utf-8&#xa;    x-served-by: cache-sin-wsss1830028&#xa;    Request</elem>
+</script><script id="http-title" output="Indian Designer Wear - Online Fashion Shopping Site for Women"><elem key="title">Indian Designer Wear - Online Fashion Shopping Site for Women</elem>
+</script><script id="http-server-header" output="Nitrogen"><elem>Nitrogen</elem>
+</script><script id="http-robots.txt" output="21 disallowed entries (15 shown)&#xa;/*&amp;view= /*sku= /*productnotfound &#xa;/LatestArrivalSliderProduct/* /Regpopup /*/*/*/*-&#45;* /*/*/*-&#45;* /bestsellerslider &#xa;/regpopup /zoom /account* /shop* /april-fool-day-offer &#xa;/bloggers-collection/cat /casual-bestsellers/cat"/><script id="ssl-cert" output="Subject: commonName=*.houseofindya.com&#xa;Subject Alternative Name: DNS:*.houseofindya.com, DNS:houseofindya.com&#xa;Not valid before: 2025-07-08T21:48:14&#xa;Not valid after:  2025-10-06T21:48:13"><table key="subject">
+<elem key="commonName">*.houseofindya.com</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">R10</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">Let&apos;s Encrypt</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">CEE4FCE9E7DFC6D6C753DEBFC287E3536C3870353A37AE974E403F74F4BE84F29CCC98DBBF800F03927385D862ADEF700844F7D24166DC27E7BA87FBEBE0953E00F984579EC901F2895963F57AF98F6372EE46009D392B629BC49CB660B8D77F39F992C98B467952097C7AE31F899CB062B23140741FD831FCCCD6689C95D2498480FBBA9E4F85B2C70571A95F66D4343022421B8F15999B5040EE8FAFA0968BEB3F32A644B5004E68323053826AF6D9A95E92FE291CB8A64EACFB96801793F8A6C14E73D5B224BB216BA513252248BB5913D1CB19D284A736096EE0F2931DA9FE6250351BBBEB00786122B8A60604074B8CDF7724648ABBBAE75951D4D03E77</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">15:B9:C5:1D:78:40:08:B3:B1:FF:7D:57:CE:F8:32:07:FD:7E:3E:D8</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">BB:BC:C3:47:A5:E4:BC:A9:C6:C3:A4:72:0C:10:8D:A2:35:E1:C8:E8</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">CA Issuers - URI:http://r10.i.lencr.org/</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:*.houseofindya.com, DNS:houseofindya.com</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:http://r10.c.lencr.org/55.crl</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 12:F1:4E:34:BD:53:72:4C:84:06:19:C3:8F:3F:7A:13:&#xa;                F8:E7:B5:62:87:88:9C:6D:30:05:84:EB:E5:86:26:3A&#xa;    Timestamp : Jul  8 22:46:44.284 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:33:5A:9F:BA:6B:A9:FD:E9:F3:26:78:BC:&#xa;                4F:82:A3:B0:45:05:54:29:7A:A4:62:95:6B:C1:73:72:&#xa;                34:A7:A1:07:02:20:5E:ED:38:4A:96:99:A4:C7:F3:4A:&#xa;                4A:8C:CD:37:A5:47:4E:71:C3:C3:2A:8A:17:22:53:FF:&#xa;                7B:F3:14:03:33:F6&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 0D:E1:F2:30:2B:D3:0D:C1:40:62:12:09:EA:55:2E:FC:&#xa;                47:74:7C:B1:D7:E9:30:EF:0E:42:1E:B4:7E:4E:AA:34&#xa;    Timestamp : Jul  8 22:46:48.251 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:43:53:7B:89:EF:8E:84:A8:A6:1F:10:5A:&#xa;                8A:F7:A3:91:7C:9A:38:8A:DF:29:D6:E5:04:3C:65:4C:&#xa;                5A:32:D4:64:02:20:6C:D0:6A:63:73:D7:9F:19:0F:FC:&#xa;                D2:9D:9E:EE:CA:B6:FC:02:15:35:28:3A:8E:42:9B:17:&#xa;                E8:74:77:75:2C:95</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-07-08T21:48:14</elem>
+<elem key="notAfter">2025-10-06T21:48:13</elem>
+</table>
+<elem key="md5">59f7b261f3885c2ccd2a3f1a3974b32f</elem>
+<elem key="sha1">31ab7371138978c89c4003404634d861e3973cd9</elem>
+<elem key="sha256">fd321c5d336a5401f74c11e0c413dc356114203aa0a599de83dcf1dceca4b446</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFEDCCA/igAwIBAgISBrjfapsYe32NOW6WqQY9xGS2MA0GCSqGSIb3DQEBCwUA&#xa;MDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQD&#xa;EwNSMTAwHhcNMjUwNzA4MjE0ODE0WhcNMjUxMDA2MjE0ODEzWjAdMRswGQYDVQQD&#xa;DBIqLmhvdXNlb2ZpbmR5YS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK&#xa;AoIBAQDO5Pzp59/G1sdT3r/Ch+NTbDhwNTo3rpdOQD909L6E8pzMmNu/gA8DknOF&#xa;2GKt73AIRPfSQWbcJ+e6h/vr4JU+APmEV57JAfKJWWP1evmPY3LuRgCdOStim8Sc&#xa;tmC41385+ZLJi0Z5Ugl8euMfiZywYrIxQHQf2DH8zNZonJXSSYSA+7qeT4WyxwVx&#xa;qV9m1DQwIkIbjxWZm1BA7o+voJaL6z8ypkS1AE5oMjBTgmr22alekv4pHLimTqz7&#xa;loAXk/imwU5z1bIkuyFrpRMlIki7WRPRyxnShKc2CW7g8pMdqf5iUDUbu+sAeGEi&#xa;uKYGBAdLjN93JGSKu7rnWVHU0D53AgMBAAGjggIyMIICLjAOBgNVHQ8BAf8EBAMC&#xa;BaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAw&#xa;HQYDVR0OBBYEFBW5xR14QAizsf99V874Mgf9fj7YMB8GA1UdIwQYMBaAFLu8w0el&#xa;5LypxsOkcgwQjaI14cjoMDMGCCsGAQUFBwEBBCcwJTAjBggrBgEFBQcwAoYXaHR0&#xa;cDovL3IxMC5pLmxlbmNyLm9yZy8wLwYDVR0RBCgwJoISKi5ob3VzZW9maW5keWEu&#xa;Y29tghBob3VzZW9maW5keWEuY29tMBMGA1UdIAQMMAowCAYGZ4EMAQIBMC4GA1Ud&#xa;HwQnMCUwI6AhoB+GHWh0dHA6Ly9yMTAuYy5sZW5jci5vcmcvNTUuY3JsMIIBAgYK&#xa;KwYBBAHWeQIEAgSB8wSB8ADuAHUAEvFONL1TckyEBhnDjz96E/jntWKHiJxtMAWE&#xa;6+WGJjoAAAGX7DhVPAAABAMARjBEAiAzWp+6a6n96fMmeLxPgqOwRQVUKXqkYpVr&#xa;wXNyNKehBwIgXu04SpaZpMfzSkqMzTelR05xw8MqihciU/978xQDM/YAdQAN4fIw&#xa;K9MNwUBiEgnqVS78R3R8sdfpMO8OQh60fk6qNAAAAZfsOGS7AAAEAwBGMEQCIENT&#xa;e4nvjoSoph8QWor3o5F8mjiK3ynW5QQ8ZUxaMtRkAiBs0Gpjc9efGQ/80p2e7sq2&#xa;/AIVNSg6jkKbF+h0d3UslTANBgkqhkiG9w0BAQsFAAOCAQEAzYX5VxtUM/h87gGK&#xa;92IAPxUzUK0hcPmP78NJkS8QGxTbaqqcfVXjc+sXLoOMG8lO8kDcFeld2Sh8vDSR&#xa;vgpn46w8uVMa0Tgk+lufyvqWgdJc4bV/gZjYHaHB2AvMz5hSPs2/dkfheCdX8zfi&#xa;7pi3XQUHEjtZFl6JgKPRaONJkU+VQZhmtcpKjkbEPegwv163HTujLONpeOk7tZ8P&#xa;eJ99mgu0PaluCKp5esIa308TmJvqWylQejWRH+T1o3rtuo87FF4dLU9iIB60F/qT&#xa;qPpz3n8ln9PF5i1Y/V7x92QaUkB/ZgmnSnIm34dxYKomEqD2ZOcuLZn330J0EhMe&#xa;6uMmSg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Linux 3.2 - 4.14" accuracy="97" line="68432">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="97"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="97"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="HP P2000 G3 NAS device" accuracy="91" line="37819">
+<osclass type="storage-misc" vendor="HP" osfamily="embedded" accuracy="91"><cpe>cpe:/h:hp:p2000_g3</cpe></osclass>
+</osmatch>
+<osmatch name="Android 9 - 10 (Linux 4.9 - 4.14)" accuracy="91" line="32762">
+<osclass type="phone" vendor="Google" osfamily="Android" osgen="10.X" accuracy="91"><cpe>cpe:/o:google:android:10</cpe></osclass>
+<osclass type="phone" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Android 8 - 9 (Linux 3.18 - 4.4)" accuracy="91" line="34147">
+<osclass type="phone" vendor="Google" osfamily="Android" osgen="8.X" accuracy="91"><cpe>cpe:/o:google:android:8</cpe></osclass>
+<osclass type="phone" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 3.13" accuracy="91" line="59907">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 3.10" accuracy="91" line="59874">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 4.11" accuracy="91" line="66652">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Android 4.1.1" accuracy="90" line="33298">
+<osclass type="media device" vendor="Google" osfamily="Android" osgen="4.1.X" accuracy="90"><cpe>cpe:/o:google:android:4.1.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16 - 4.6" accuracy="90" line="67504">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Android 4.2.2 (Linux 3.4)" accuracy="90" line="69573">
+<osclass type="phone" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+<osclass type="phone" vendor="Google" osfamily="Android" osgen="4.2.X" accuracy="90"><cpe>cpe:/o:google:android:4.2.2</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="36382753" lastboot="Fri May 24 15:31:39 2024"/>
+<tcpsequence index="257" difficulty="Good luck!" values="9B9D1190,28C8A150,ED3433D8,54A84C55,C05B865B,F10EF95C"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="100HZ" values="D8DBA3C3,D8DBA3CD,D8DBA3D9,D8DBA3E4,D8DBA3EF,D8DBA3F9"/>
+<times srtt="244359" rttvar="11376" to="289863"/>
+</host>
+<runstats><finished time="1752927652" timestr="Sat Jul 19 17:50:52 2025" summary="Nmap done at Sat Jul 19 17:50:52 2025; 1 IP address (1 host up) scanned in 84.53 seconds" elapsed="84.53" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

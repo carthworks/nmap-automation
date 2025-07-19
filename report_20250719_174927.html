@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nmap Recon Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding-top: 70px; }
+    .vuln { color: #d63384; }
+    .attack { color: #fd7e14; }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Nmap Recon Report</span>
+    <span class="text-light">Generated 2025-07-19 17:50:52</span>
+  </div>
+</nav>
+
+<div class="container">
+  
+    <div class="card mb-4">
+      <div class="card-header h5">Host: 146.75.45.91</div>
+      <div class="card-body">
+        
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>tcp/80</strong> (http-proxy) — <span class="badge bg-secondary">open</span>
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Unknown / manual investigation</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Manual recon recommended</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>tcp/443</strong> (https) — <span class="badge bg-secondary">open</span>
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>SSL misconfig</li>
+                    
+                      <li>Self-signed certs</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>sslscan</li>
+                    
+                      <li>testssl.sh</li>
+                    
+                      <li>Burp Suite (HTTPS)</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+        
+      </div>
+    </div>
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+    
