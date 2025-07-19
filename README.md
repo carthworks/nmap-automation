@@ -139,4 +139,9 @@ This project is provided as-is for educational and authorized security testing p
 ## Contributing
 
 Feel free to submit issues and enhancement requests!
+<<<<<<< HEAD
+=======
+<img width="886" height="1316" alt="image" src="https://github.com/user-attachments/assets/b981a009-986d-4c47-9391-aa5fb2bb6bc2" />
+
+>>>>>>> aa89bcacaba4e2781c4a4b5dd13d3b943ed23eeb
 

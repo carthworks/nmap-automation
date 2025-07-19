@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nmap Recon Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding-top: 70px; }
+    .vuln { color: #d63384; }
+    .attack { color: #fd7e14; }
+    .script-output { font-family: monospace; font-size: 0.9em; background: #f8f9fa; padding: 0.5rem; margin: 0.25rem 0; border-radius: 0.25rem; }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Nmap Recon Report</span>
+    <span class="text-light">Generated 2025-07-19 18:06:51</span>
+  </div>
+</nav>
+
+<div class="container">
+  
+    
+    <div class="card mb-4">
+      <div class="card-header h5">
+        Nmap scan report for 
+        www.shraddhahospital.in (13.226.61.54)
+      </div>
+      <div class="card-body">
+        <p><strong>Host is up</strong> (70.333s latency)</p>
+        
+        <p><strong>rDNS record:</strong> server-13-226-61-54.hkg54.r.cloudfront.net</p>
+        
+        
+        <p><strong>Not shown:</strong> 998 filtered tcp ports</p>
+        
+        
+        
+          <h6>PORT&nbsp;&nbsp;&nbsp;&nbsp;STATE&nbsp;&nbsp;SERVICE&nbsp;&nbsp;&nbsp;VERSION</h6>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>80/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">http Amazon CloudFront httpd</span>
+              
+                
+                <div class="script-output">http-server-header: CloudFront</div>
+                
+                <div class="script-output">http-title: Did not follow redirect to https://www.shraddhahospital.in/</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Directory listing</li>
+                    
+                      <li>Outdated CMS</li>
+                    
+                      <li>Insecure headers</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Nikto scan</li>
+                    
+                      <li>dirb/gobuster</li>
+                    
+                      <li>Burp Suite mapping</li>
+                    
+                      <li>Searchsploit</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>443/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">ssl/http Amazon CloudFront httpd</span>
+              
+                
+                <div class="script-output">ssl-cert: Subject: commonName=shraddhahospital.in
+Subject Alternative Name: DNS:shraddhahospital.in, DNS:*.c-dns.nowfloats.net, DNS:*.shraddhahospital.in
+Not valid before: 2025-03-27T00:00:00
+Not valid after:  2026-04-24T23:59:59</div>
+                
+                <div class="script-output">http-server-header: CloudFront</div>
+                
+                <div class="script-output">http-title: Site doesn't have a title (text).</div>
+                
+                <div class="script-output">http-cors: HEAD GET POST PUT DELETE TRACE OPTIONS CONNECT PATCH</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Directory listing</li>
+                    
+                      <li>Outdated CMS</li>
+                    
+                      <li>Insecure headers</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Nikto scan</li>
+                    
+                      <li>dirb/gobuster</li>
+                    
+                      <li>Burp Suite mapping</li>
+                    
+                      <li>Searchsploit</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+        
+        
+        
+        <div class="mt-3">
+          <h6>OS Detection:</h6>
+          
+          <p>Linux 3.2 - 4.14 (85% accuracy)</p>
+          
+          <p>Linux 3.2 - 3.8 (85% accuracy)</p>
+          
+          <p>Linux 4.4 (85% accuracy)</p>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+    
