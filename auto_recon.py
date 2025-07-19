@@ -222,7 +222,11 @@ def generate_html_report(
     body { padding-top: 70px; }
     .vuln { color: #d63384; }
     .attack { color: #fd7e14; }
+    .action-items { color: #0d6efd; }
     .script-output { font-family: monospace; font-size: 0.9em; background: #f8f9fa; padding: 0.5rem; margin: 0.25rem 0; border-radius: 0.25rem; }
+    .priority-high { border-left: 4px solid #dc3545; }
+    .priority-medium { border-left: 4px solid #fd7e14; }
+    .priority-low { border-left: 4px solid #198754; }
   </style>
 </head>
 <body>
@@ -234,6 +238,107 @@ def generate_html_report(
 </nav>
 
 <div class="container">
+  <!-- Executive Summary -->
+  <div class="card mb-4 border-info">
+    <div class="card-header bg-info text-white h5">
+      <i class="fas fa-clipboard-list"></i> Executive Summary & Action Items
+    </div>
+    <div class="card-body">
+      {% set total_hosts = scan_data|length %}
+      {% set total_ports = [] %}
+      {% set critical_services = [] %}
+      {% for host_ip, host_data_list in scan_data %}
+        {% for host_data in host_data_list %}
+          {% for port in host_data.ports %}
+            {% set _ = total_ports.append(port) %}
+            {% if port.service in ['ssh', 'ftp', 'mysql', 'rdp', 'smb'] %}
+              {% set _ = critical_services.append(port) %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+      
+      <div class="row">
+        <div class="col-md-3">
+          <div class="text-center">
+            <h3 class="text-primary">{{ total_hosts }}</h3>
+            <p>Hosts Scanned</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h3 class="text-success">{{ total_ports|length }}</h3>
+            <p>Open Ports</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h3 class="text-warning">{{ critical_services|length }}</h3>
+            <p>Critical Services</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h3 class="text-danger">{{ critical_services|length + (total_ports|length * 0.3)|int }}</h3>
+            <p>Action Items</p>
+          </div>
+        </div>
+      </div>
+
+      <h6 class="mt-4 mb-3">Immediate Action Items:</h6>
+      <div class="action-items">
+        {% for host_ip, host_data_list in scan_data %}
+          {% for host_data in host_data_list %}
+            {% for port in host_data.ports %}
+              {% if port.service == 'ssh' %}
+              <div class="alert alert-danger priority-high">
+                <strong>HIGH PRIORITY:</strong> SSH service on {{ host_data.addr }}:{{ port.port.split('/')[0] }} - Implement key-based authentication and disable password login
+              </div>
+              {% endif %}
+              {% if port.service == 'ftp' %}
+              <div class="alert alert-danger priority-high">
+                <strong>HIGH PRIORITY:</strong> FTP service on {{ host_data.addr }}:{{ port.port.split('/')[0] }} - Check for anonymous access and consider SFTP migration
+              </div>
+              {% endif %}
+              {% if port.service == 'mysql' %}
+              <div class="alert alert-danger priority-high">
+                <strong>HIGH PRIORITY:</strong> MySQL on {{ host_data.addr }}:{{ port.port.split('/')[0] }} - Verify access controls and update to latest version
+              </div>
+              {% endif %}
+              {% if port.service == 'http' %}
+              <div class="alert alert-warning priority-medium">
+                <strong>MEDIUM PRIORITY:</strong> HTTP service on {{ host_data.addr }}:{{ port.port.split('/')[0] }} - Run web vulnerability scan and implement HTTPS redirect
+              </div>
+              {% endif %}
+              {% if port.service == 'https' %}
+              <div class="alert alert-info priority-low">
+                <strong>LOW PRIORITY:</strong> HTTPS on {{ host_data.addr }}:{{ port.port.split('/')[0] }} - Verify SSL configuration and certificate validity
+              </div>
+              {% endif %}
+              {% if port.service == 'smb' %}
+              <div class="alert alert-danger priority-high">
+                <strong>HIGH PRIORITY:</strong> SMB service on {{ host_data.addr }}:{{ port.port.split('/')[0] }} - Check for null sessions and apply MS17-010 patches
+              </div>
+              {% endif %}
+              {% if port.service == 'rdp' %}
+              <div class="alert alert-danger priority-high">
+                <strong>HIGH PRIORITY:</strong> RDP on {{ host_data.addr }}:{{ port.port.split('/')[0] }} - Enable NLA, update patches, and restrict access
+              </div>
+              {% endif %}
+            {% endfor %}
+            
+            {% if host_data.os_info %}
+            <div class="alert alert-warning priority-medium">
+              <strong>MEDIUM PRIORITY:</strong> OS Detection for {{ host_data.addr }} - Verify OS version and apply security updates
+            </div>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Detailed Scan Results -->
   {% for host_ip, host_data_list in scan_data %}
     {% for host_data in host_data_list %}
     <div class="card mb-4">
@@ -273,6 +378,43 @@ def generate_html_report(
                     {% for a in p.attack %}
                       <li>{{ a }}</li>
                     {% endfor %}
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    {% if p.service == 'ssh' %}
+                      <li>Disable password authentication, use key-based auth only</li>
+                      <li>Change default port from 22</li>
+                      <li>Implement fail2ban for brute-force protection</li>
+                    {% elif p.service == 'http' %}
+                      <li>Implement HTTPS redirect</li>
+                      <li>Run Nikto and dirb scans for web vulnerabilities</li>
+                      <li>Check for directory listing and sensitive files</li>
+                    {% elif p.service == 'https' %}
+                      <li>Verify SSL certificate validity and configuration</li>
+                      <li>Run SSL Labs test for security rating</li>
+                      <li>Check for weak ciphers and protocols</li>
+                    {% elif p.service == 'ftp' %}
+                      <li>Disable anonymous access if enabled</li>
+                      <li>Migrate to SFTP for secure file transfer</li>
+                      <li>Implement strong authentication</li>
+                    {% elif p.service == 'mysql' %}
+                      <li>Restrict remote access to specific IPs</li>
+                      <li>Update to latest version</li>
+                      <li>Review user privileges and remove defaults</li>
+                    {% elif p.service == 'smb' %}
+                      <li>Apply MS17-010 (EternalBlue) patches immediately</li>
+                      <li>Disable SMBv1 protocol</li>
+                      <li>Review share permissions</li>
+                    {% elif p.service == 'rdp' %}
+                      <li>Enable Network Level Authentication (NLA)</li>
+                      <li>Apply BlueKeep patches (CVE-2019-0708)</li>
+                      <li>Use VPN for remote access instead</li>
+                    {% else %}
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    {% endif %}
                   </ul>
                 </div>
               </div>
@@ -319,15 +461,22 @@ def cli() -> None:
         "-o",
         "--output",
         type=Path,
-        default=Path(f"report_{datetime.now():%Y%m%d_%H%M%S}"),
+        default=None,
         help="Output file stem (no extension)",
     )
     args = parser.parse_args()
+
+    # Generate default filename with hostname if not provided
+    if args.output is None:
+        # Clean hostname for filename (remove invalid characters)
+        clean_target = args.target.replace("/", "_").replace(":", "_").replace(".", "_")
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        args.output = Path(f"report_{clean_target}_{timestamp}")
 
     xml_path = run_nmap(args.target, args.output)
     scan_data = parse_nmap(xml_path)
     generate_html_report(scan_data, args.output.with_suffix(".html"))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     cli()

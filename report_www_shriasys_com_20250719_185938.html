@@ -1,0 +1,915 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nmap Recon Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding-top: 70px; }
+    .vuln { color: #d63384; }
+    .attack { color: #fd7e14; }
+    .action-items { color: #0d6efd; }
+    .script-output { font-family: monospace; font-size: 0.9em; background: #f8f9fa; padding: 0.5rem; margin: 0.25rem 0; border-radius: 0.25rem; }
+    .priority-high { border-left: 4px solid #dc3545; }
+    .priority-medium { border-left: 4px solid #fd7e14; }
+    .priority-low { border-left: 4px solid #198754; }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Nmap Recon Report</span>
+    <span class="text-light">Generated 2025-07-19 19:01:44</span>
+  </div>
+</nav>
+
+<div class="container">
+  <!-- Executive Summary -->
+  <div class="card mb-4 border-info">
+    <div class="card-header bg-info text-white h5">
+      <i class="fas fa-clipboard-list"></i> Executive Summary & Action Items
+    </div>
+    <div class="card-body">
+      
+      
+      
+      
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      
+      
+      <div class="row">
+        <div class="col-md-3">
+          <div class="text-center">
+            <h3 class="text-primary">1</h3>
+            <p>Hosts Scanned</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h3 class="text-success">15</h3>
+            <p>Open Ports</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h3 class="text-warning">0</h3>
+            <p>Critical Services</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h3 class="text-danger">4</h3>
+            <p>Action Items</p>
+          </div>
+        </div>
+      </div>
+
+      <h6 class="mt-4 mb-3">Immediate Action Items:</h6>
+      <div class="action-items">
+        
+          
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+              
+              
+              
+              
+              
+              
+              
+            
+            
+            
+            <div class="alert alert-warning priority-medium">
+              <strong>MEDIUM PRIORITY:</strong> OS Detection for 162.215.254.118 - Verify OS version and apply security updates
+            </div>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Detailed Scan Results -->
+  
+    
+    <div class="card mb-4">
+      <div class="card-header h5">
+        Nmap scan report for 
+        www.shriasys.com (162.215.254.118)
+      </div>
+      <div class="card-body">
+        <p><strong>Host is up</strong> (249.464s latency)</p>
+        
+        <p><strong>rDNS record:</strong> 162-215-254-118.unifiedlayer.com</p>
+        
+        
+        <p><strong>Not shown:</strong> 981 filtered tcp ports</p>
+        
+        
+        
+          <h6>PORT&nbsp;&nbsp;&nbsp;&nbsp;STATE&nbsp;&nbsp;SERVICE&nbsp;&nbsp;&nbsp;VERSION</h6>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>21/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">ftp Pure-FTPd</span>
+              
+                
+                <div class="script-output">ssl-cert: Subject: commonName=*.webhostbox.net
+Subject Alternative Name: DNS:*.webhostbox.net, DNS:webhostbox.net
+Not valid before: 2025-05-04T00:00:00
+Not valid after:  2026-05-04T23:59:59</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Anonymous login</li>
+                    
+                      <li>FTP bounce</li>
+                    
+                      <li>CVE-1999-0497</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Hydra brute-force</li>
+                    
+                      <li>Metasploit: auxiliary/scanner/ftp/ftp_login</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>22/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">ssh OpenSSH 7.4</span>
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Weak credentials</li>
+                    
+                      <li>Shellshock (older versions)</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Hydra SSH login</li>
+                    
+                      <li>SSH key cracking</li>
+                    
+                      <li>Brute-force</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>25/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">smtp Exim smtpd 4.98.1</span>
+              
+                
+                <div class="script-output">smtp-commands: Couldn't establish connection on port 25</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Unknown / manual investigation</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Manual recon recommended</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>26/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">tcpwrapped</span>
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Unknown / manual investigation</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Manual recon recommended</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>53/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">domain ISC BIND 9.11.4-P2</span>
+              
+                
+                <div class="script-output">dns-nsid: 
+  bind.version: 9.11.4-P2-RedHat-9.11.4-26.P2.el7_9.9</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Unknown / manual investigation</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Manual recon recommended</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>80/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">http Apache httpd</span>
+              
+                
+                <div class="script-output">http-server-header: Apache</div>
+                
+                <div class="script-output">http-title: Did not follow redirect to https://www.shriasys.com/</div>
+                
+                <div class="script-output">http-robots.txt: 8 disallowed entries 
+/admin/ /login/ /checkout/ /cart/ /private/ /user/ /old/ 
+/beta/</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Directory listing</li>
+                    
+                      <li>Outdated CMS</li>
+                    
+                      <li>Insecure headers</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Nikto scan</li>
+                    
+                      <li>dirb/gobuster</li>
+                    
+                      <li>Burp Suite mapping</li>
+                    
+                      <li>Searchsploit</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>110/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">pop3 Dovecot pop3d</span>
+              
+                
+                <div class="script-output">ssl-cert: Subject: commonName=*.shriasys.com
+Subject Alternative Name: DNS:*.shriasys.com, DNS:shriasys.com, DNS:www.timesheet.shriasys.com
+Not valid before: 2025-05-27T00:50:13
+Not valid after:  2025-08-25T00:50:12</div>
+                
+                <div class="script-output">pop3-capabilities: USER AUTH-RESP-CODE TOP CAPA RESP-CODES STLS SASL(PLAIN LOGIN) PIPELINING UIDL</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Unknown / manual investigation</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Manual recon recommended</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>143/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">imap Dovecot imapd</span>
+              
+                
+                <div class="script-output">ssl-cert: Subject: commonName=*.shriasys.com
+Subject Alternative Name: DNS:*.shriasys.com, DNS:shriasys.com, DNS:www.timesheet.shriasys.com
+Not valid before: 2025-05-27T00:50:13
+Not valid after:  2025-08-25T00:50:12</div>
+                
+                <div class="script-output">imap-capabilities: OK ID ENABLE post-login LOGIN-REFERRALS IDLE listed capabilities NAMESPACE AUTH=PLAIN LITERAL+ IMAP4rev1 more Pre-login SASL-IR AUTH=LOGINA0001 STARTTLS have</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Unknown / manual investigation</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Manual recon recommended</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>443/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">ssl/http Apache httpd</span>
+              
+                
+                <div class="script-output">ssl-cert: Subject: commonName=*.shriasys.com
+Subject Alternative Name: DNS:*.shriasys.com, DNS:shriasys.com, DNS:www.timesheet.shriasys.com
+Not valid before: 2025-05-27T00:50:13
+Not valid after:  2025-08-25T00:50:12</div>
+                
+                <div class="script-output">http-title: Website Development &amp; Digital Marketing Company | Shriasys</div>
+                
+                <div class="script-output">http-server-header: Apache</div>
+                
+                <div class="script-output">ssl-date: TLS randomness does not represent time</div>
+                
+                <div class="script-output">http-trane-info: Problem with XML parsing of /evox/about</div>
+                
+                <div class="script-output">http-robots.txt: 8 disallowed entries 
+/admin/ /login/ /checkout/ /cart/ /private/ /user/ /old/ 
+/beta/</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Directory listing</li>
+                    
+                      <li>Outdated CMS</li>
+                    
+                      <li>Insecure headers</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Nikto scan</li>
+                    
+                      <li>dirb/gobuster</li>
+                    
+                      <li>Burp Suite mapping</li>
+                    
+                      <li>Searchsploit</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>465/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">smtps</span>
+              
+                
+                <div class="script-output">smtp-commands: bh-65.webhostbox.net Hello www.shriasys.com [115.96.74.239], SIZE 52428800, LIMITS MAILMAX=50 RCPTMAX=50000, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, HELP
+ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Unknown / manual investigation</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Manual recon recommended</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>587/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">tcpwrapped</span>
+              
+                
+                <div class="script-output">smtp-commands: bh-65.webhostbox.net Hello www.shriasys.com [115.96.74.239], SIZE 52428800, LIMITS MAILMAX=50 RCPTMAX=50000, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, STARTTLS, HELP
+ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Unknown / manual investigation</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Manual recon recommended</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>993/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">imaps</span>
+              
+                
+                <div class="script-output">imap-capabilities: CAPABILITY</div>
+                
+                <div class="script-output">ssl-cert: Subject: commonName=*.shriasys.com
+Subject Alternative Name: DNS:*.shriasys.com, DNS:shriasys.com, DNS:www.timesheet.shriasys.com
+Not valid before: 2025-05-27T00:50:13
+Not valid after:  2025-08-25T00:50:12</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Unknown / manual investigation</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Manual recon recommended</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>995/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">pop3s</span>
+              
+                
+                <div class="script-output">pop3-capabilities: USER RESP-CODES SASL(PLAIN LOGIN) AUTH-RESP-CODE PIPELINING TOP CAPA UIDL</div>
+                
+                <div class="script-output">ssl-cert: Subject: commonName=*.shriasys.com
+Subject Alternative Name: DNS:*.shriasys.com, DNS:shriasys.com, DNS:www.timesheet.shriasys.com
+Not valid before: 2025-05-27T00:50:13
+Not valid after:  2025-08-25T00:50:12</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Unknown / manual investigation</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Manual recon recommended</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>2222/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">ssh OpenSSH 7.4</span>
+              
+                
+                <div class="script-output">ssh-hostkey: 
+  1024 46:f2:73:6d:c7:3d:9a:3b:1a:be:58:a9:92:ca:c6:1a (DSA)
+  2048 98:db:b0:b1:27:59:f0:53:53:5c:d0:a6:17:13:2f:82 (RSA)
+  256 6c:fa:25:6a:af:2a:df:0a:59:a0:95:bd:76:a4:d3:5f (ECDSA)</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Weak credentials</li>
+                    
+                      <li>Shellshock (older versions)</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Hydra SSH login</li>
+                    
+                      <li>SSH key cracking</li>
+                    
+                      <li>Brute-force</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 border-start border-primary ps-3">
+              <strong>3306/tcp</strong>&nbsp;&nbsp;open&nbsp;&nbsp;<span class="text-primary">mysql MySQL 5.7.23-23</span>
+              
+                
+                <div class="script-output">mysql-info: 
+  Protocol: 10
+  Version: 5.7.23-23
+  Thread ID: 3561926
+  Capabilities flags: 65535
+  Some Capabilities: Support41Auth, LongPassword, Speaks41ProtocolOld, SupportsCompression, SupportsLoadDataLocal, SupportsTransactions, LongColumnFlag, SwitchToSSLAfterHandshake, Speaks41ProtocolNew, InteractiveClient, ConnectWithDatabase, IgnoreSigpipes, ODBCClient, IgnoreSpaceBeforeParenthesis, DontAllowDatabaseTableColumn, FoundRows, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+  Status: Autocommit
+  Salt: }{\x184p1?\x08^w`]\x1C\x16le\x101m>
+  Auth Plugin Name: mysql_native_password</div>
+                
+                <div class="script-output">ssl-date: TLS randomness does not represent time</div>
+                
+                <div class="script-output">ssl-cert: Subject: commonName=*.webhostbox.net
+Subject Alternative Name: DNS:*.webhostbox.net, DNS:webhostbox.net
+Not valid before: 2025-05-04T00:00:00
+Not valid after:  2026-05-04T23:59:59</div>
+                
+              
+              <div class="mt-2">
+                <div class="vuln"><strong>Possible Vulnerabilities:</strong>
+                  <ul>
+                    
+                      <li>Default creds</li>
+                    
+                      <li>Remote access without firewall</li>
+                    
+                  </ul>
+                </div>
+                <div class="attack"><strong>Suggested Attacks:</strong>
+                  <ul>
+                    
+                      <li>Hydra</li>
+                    
+                      <li>sqlmap</li>
+                    
+                      <li>mysql command line</li>
+                    
+                  </ul>
+                </div>
+                <div class="action-items"><strong>Recommended Actions:</strong>
+                  <ul>
+                    
+                      <li>Review service configuration and access controls</li>
+                      <li>Update to latest version</li>
+                      <li>Monitor service logs for suspicious activity</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+        
+        
+        
+        <div class="mt-3">
+          <h6>OS Detection:</h6>
+          
+          <p>Linux 4.19 - 5.15 (97% accuracy)</p>
+          
+          <p>Linux 3.4 (92% accuracy)</p>
+          
+          <p>Linux 4.15 (92% accuracy)</p>
+          
+          <p>IPFire 2.27 (Linux 5.15 - 6.1) (90% accuracy)</p>
+          
+          <p>Linux 5.4 (89% accuracy)</p>
+          
+          <p>Linux 5.0 - 5.14 (87% accuracy)</p>
+          
+          <p>MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3) (87% accuracy)</p>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+    
